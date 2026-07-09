@@ -95,9 +95,20 @@ flowchart TD
 
 ### RTL Synthesis
 
-**Command Used:**
+**Automated Flow Command:**
 ```bash
 make DESIGN_CONFIG=designs/nangate45/archgen/config.mk synth
+```
+
+**Manual Exploration (Yosys):**
+```tcl
+yosys
+read_verilog *.v
+hierarchy -top ariane -check
+synth -top ariane
+dfflibmap -liberty /path/to/NangateOpenCellLibrary_typical.lib
+abc -liberty /path/to/NangateOpenCellLibrary_typical.lib
+write_verilog -noattr -noexpr ariane_mapped.v
 ```
 
 Synthesis converted the provided Ariane133 RTL into a technology-mapped gate-level netlist using the Nangate45 standard cell library. The RTL inspection revealed that the SRAM wrapper definitions were in `macros.v`. Including `macros.v` during synthesis successfully resolved the missing module references for `SyncSpRamBeNx64`.
@@ -106,15 +117,37 @@ Synthesis converted the provided Ariane133 RTL into a technology-mapped gate-lev
 
 ### OpenROAD Design Initialization
 
-Before floorplanning, the timing libraries, physical libraries (LEF), and timing constraints were loaded. The original SDC file `ariane_450mhz.sdc` had a syntax issue (`[expr]` inside `{}`) which was corrected so OpenSTA could evaluate it properly.
+Before floorplanning, the timing libraries, physical libraries (LEF), and timing constraints were loaded. 
+
+**Manual Exploration (OpenROAD Shell):**
+```tcl
+read_liberty /path/to/NangateOpenCellLibrary_typical.lib
+read_liberty /path/to/fakeram45_256x16.lib
+read_lef /path/to/NangateOpenCellLibrary.tech.lef
+read_lef /path/to/NangateOpenCellLibrary.macro.mod.lef
+read_lef /path/to/fakeram45_256x16.lef
+read_verilog ariane_mapped.v
+link_design ariane
+read_sdc constraints/ariane_450mhz.sdc
+```
+
+During initialization, the original SDC file `ariane_450mhz.sdc` threw a syntax issue (`[expr]` inside `{}`) which was corrected so OpenSTA could evaluate it properly.
 
 ---
 
 ### Floorplanning
 
-**Command Used:**
+**Automated Flow Command:**
 ```bash
 make DESIGN_CONFIG=designs/nangate45/archgen/config.mk floorplan
+```
+
+**Manual Exploration (OpenROAD Shell):**
+```tcl
+initialize_floorplan \
+    -die_area "0 0 1500 1500" \
+    -core_area "10 12 1448 1448" \
+    -site FreePDK45_38x28_10R_NP_162NW_34O
 ```
 
 The die area and core area were initialized as per the physical constraints. Tap cells were inserted throughout the floorplan to prevent latch-up and provide well/substrate connections.
@@ -142,9 +175,20 @@ The PDN was generated to distribute the power (`VDD`) and ground (`VSS`) supplie
 
 ### Placement
 
-**Command Used:**
+**Automated Flow Command:**
 ```bash
 make DESIGN_CONFIG=designs/nangate45/archgen/config.mk place
+```
+
+**Manual Exploration (OpenROAD Shell):**
+```tcl
+# Place IO pins explicitly before placement
+place_pins -hor_layers metal5 -ver_layers metal6 \
+    -exclude left:0-500 -exclude left:1000-1500 \
+    -exclude right:* -exclude top:* -exclude bottom:*
+
+global_placement
+detailed_placement
 ```
 
 IO pins were placed using the exclusion constraints from `io.tcl`. Afterward, global and detailed placement populated the core area with logic cells, legalizing their positions and minimizing wirelength.
