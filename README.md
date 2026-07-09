@@ -106,8 +106,8 @@ yosys
 read_verilog *.v
 hierarchy -top ariane -check
 synth -top ariane
-dfflibmap -liberty /path/to/NangateOpenCellLibrary_typical.lib
-abc -liberty /path/to/NangateOpenCellLibrary_typical.lib
+dfflibmap -liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+abc -liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
 write_verilog -noattr -noexpr ariane_mapped.v
 ```
 
@@ -121,14 +121,14 @@ Before floorplanning, the timing libraries, physical libraries (LEF), and timing
 
 **Manual Exploration (OpenROAD Shell):**
 ```tcl
-read_liberty /path/to/NangateOpenCellLibrary_typical.lib
-read_liberty /path/to/fakeram45_256x16.lib
-read_lef /path/to/NangateOpenCellLibrary.tech.lef
-read_lef /path/to/NangateOpenCellLibrary.macro.mod.lef
-read_lef /path/to/fakeram45_256x16.lef
-read_verilog ariane_mapped.v
-link_design ariane
-read_sdc constraints/ariane_450mhz.sdc
+read_liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_lef /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+read_lef /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+read_lef /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/fakeram45_256x16.lef
+read_verilog /home/kiran/OpenROAD-Practice/Archgen-Hiring/rtl/ariane_mapped.v
+link_design Ariane
+read_sdc /home/kiran/OpenROAD-Practice/Archgen-Hiring/constraints/ariane_450mhz.sdc
 ```
 
 During initialization, the original SDC file `ariane_450mhz.sdc` threw a syntax issue (`[expr]` inside `{}`) which was corrected so OpenSTA could evaluate it properly.
