@@ -1,0 +1,41 @@
+export DESIGN_NAME = ariane
+export DESIGN_NICKNAME = archgen
+export PLATFORM = nangate45
+
+export SYNTH_HIERARCHICAL = 1
+
+export VERILOG_FILES = \
+$(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/ariane.sv2v.v \
+$(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/macros.v \
+$(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/fakeram45_256x16.v
+
+export SDC_FILE = \
+$(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/ariane_450mhz.sdc
+
+export ADDITIONAL_LEFS = \
+$(PLATFORM_DIR)/lef/fakeram45_256x16.lef
+
+export ADDITIONAL_LIBS = \
+$(PLATFORM_DIR)/lib/fakeram45_256x16.lib
+
+#export CORE_UTILIZATION = 50
+#export CORE_ASPECT_RATIO = 1
+#export CORE_MARGIN = 5
+export DIE_AREA = 0 0 1500 1500
+export CORE_AREA = 10 12 1448 1448
+
+export MACRO_PLACE_HALO = 10 10
+export MACRO_PLACE_CHANNEL = 20 20
+export IO_CONSTRAINTS = \
+$(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/io.tcl
+
+
+export SKIP_GATE_CLONING = 1
+
+export RTLMP_MAX_LEVEL = 1
+export RTLMP_MAX_MACRO = 30
+export RTLMP_MIN_MACRO = 10
+export RTLMP_MAX_INST = 80000
+export RTLMP_MIN_INST = 8000
+
+#export GPL_RANDOM_SEED = 3

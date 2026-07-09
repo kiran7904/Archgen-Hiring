@@ -1,0 +1,12 @@
+# Large binary files - exceed GitHub 100MB limit
+results/*.odb
+results/*.def
+results/*.gds
+results/*.spef
+
+# Unnecessary files
+readme.txt
+cmds used.txt
+logs/*.json
+reports/final_*.webp.png
+reports/*-5.rpt

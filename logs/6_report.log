@@ -1,0 +1,82 @@
+OpenROAD dcf36133a369abc8f3c5e5738cd4d82e4903c0e0 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/archgen/base/6_1_fill.odb
+read_sdc ./results/nangate45/archgen/base/6_1_fill.sdc
+source /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+write_db ./results/nangate45/archgen/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation ariane (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 901535 rc segments
+[INFO RCX-0439] Coupling Cap extraction ariane ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 8% of 1365321 wires extracted
+[INFO RCX-0442] 18% of 1365321 wires extracted
+[INFO RCX-0442] 26% of 1365321 wires extracted
+[INFO RCX-0442] 33% of 1365321 wires extracted
+[INFO RCX-0442] 40% of 1365321 wires extracted
+[INFO RCX-0442] 44% of 1365321 wires extracted
+[INFO RCX-0442] 52% of 1365321 wires extracted
+[INFO RCX-0442] 57% of 1365321 wires extracted
+[INFO RCX-0442] 63% of 1365321 wires extracted
+[INFO RCX-0442] 69% of 1365321 wires extracted
+[INFO RCX-0442] 77% of 1365321 wires extracted
+[INFO RCX-0442] 87% of 1365321 wires extracted
+[INFO RCX-0442] 92% of 1365321 wires extracted
+[INFO RCX-0442] 99% of 1365321 wires extracted
+[INFO RCX-0442] 100% of 1365321 wires extracted
+[INFO RCX-0045] Extract 200164 nets, 1081173 rsegs, 1081173 caps, 2245308 ccs
+[INFO RCX-0042] 100000 nets finished
+[INFO RCX-0042] 200000 nets finished
+[INFO RCX-0443] 200164 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 3.41e-01 W
+Supply voltage   : 1.10e+00 V
+Worstcase voltage: 1.09e+00 V
+Average voltage  : 1.10e+00 V
+Average IR drop  : 6.31e-04 V
+Worstcase IR drop: 5.50e-03 V
+Percentage drop  : 0.50 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 3.41e-01 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 9.21e-03 V
+Average voltage  : 6.22e-04 V
+Average IR drop  : 6.22e-04 V
+Worstcase IR drop: 9.21e-03 V
+Percentage drop  : 0.84 %
+######################################
+Cell type report:                       Count       Area
+  Macro                                   132  416463.43
+  Fill cell                            376371 1238942.61
+  Tap cell                              14912    3966.59
+  Clock buffer                           5820    6984.10
+  Timing Repair Buffer                  26054   31990.49
+  Inverter                               6683    3589.67
+  Clock inverter                         1320    1072.51
+  Sequential cell                       20640  109841.51
+  Multi-Input combinational cell       113557  170037.31
+  Total                                565489 1982888.22
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 739979 um^2 36% utilization.
+Elapsed time: 5:00.65[h:]min:sec. CPU time: user 390.70 sys 58.30 (149%). Peak memory: 4541520KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+6_report                                300           4435                  N/A
