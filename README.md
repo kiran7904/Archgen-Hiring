@@ -222,6 +222,38 @@ The fully routed OpenDB database was exported to a standard GDSII layout file.
 
 ---
 
+### Static Timing Analysis (STA)
+
+#### Objective
+
+After completing the physical implementation flow, Static Timing Analysis (STA) was performed using OpenSTA to verify whether the implemented design satisfies the required timing constraints.
+
+The analysis was performed using the timing constraints specified in `ariane_450mhz.sdc`:
+
+- Clock Frequency: **450 MHz**
+- Clock Period: **2.222 ns**
+- Input Delay: **20% of the clock period**
+- Output Delay: **20% of the clock period**
+- Clock Latency: **0.535 ns**
+
+#### Timing Results
+
+| Parameter | Value |
+|-----------|------:|
+| Target Frequency | 450 MHz |
+| Clock Period | 2.222 ns |
+| Worst Negative Slack (WNS) | -1.19 ns |
+| Total Negative Slack (TNS) | -3629.72 ns |
+| Hold TNS | 0 ns |
+
+#### Observation
+
+The complete RTL-to-GDSII implementation flow was successfully executed using the specified timing constraints. Static timing analysis showed that hold timing requirements were satisfied, while setup timing exhibited a Worst Negative Slack (WNS) of **-1.19 ns** at the target frequency of **450 MHz**.
+
+This indicates that additional timing optimization, such as floorplan refinement, placement optimization, clock tree tuning, or routing optimization, would be required to achieve full setup timing closure at the target operating frequency.
+
+---
+
 ## Implementation Results
 
 | Metric | Value |
