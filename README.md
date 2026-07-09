@@ -313,21 +313,7 @@ This indicates that additional timing optimization, such as floorplan refinement
 | Final GDSII Generated | ✅ Yes |
 | Final DEF Generated | ✅ Yes |
 
----
 
-## Challenges Encountered & Resolutions
-
-| Issue | Root Cause | Resolution |
-|-------|-----------|------------|
-| `YOSYS_EXE not found` | ORFS defaulted to built-in path instead of Nix shell | Exported `OPENROAD_EXE` and `YOSYS_EXE` manually |
-| `STA-0371: Invalid clock waveform` | OpenSTA failed to parse Tcl `[expr]` inside `{}` | Rewrote SDC to use `set clk_half_period` and `list` |
-| `GPL-0326: Top-level IO port not placed` | Global placement ran before IO pins were placed | Called `place_pins` explicitly before global placement |
-| `DRT-0416: Off-grid SRAM pin shape` | SRAM macros not placed legally before routing | Added explicit macro placement stage using `rtl_macro_placer` |
-| `Invalid move type: vt_swap reroute` | `vt_swap` not supported in current OpenROAD build | Modified global route script to skip `vt_swap` |
-| `remove_from_collection` | Tcl API mismatch during timing reporting | Commented out incompatible reporting functions in scripts |
-| **WSL OOM** | 8GB WSL default memory was insufficient for detailed routing | Increased WSL memory limit to 11GB in `~/.wslconfig` |
-
----
 
 ## Conclusion
 
