@@ -1,10 +1,10 @@
-# Ariane (CVA6) @ 450 MHz — Timing Closure Optimization
+# Ariane (Ariane133) @ 450 MHz — Timing Closure Optimization
 ### OpenROAD Flow Scripts · Nangate45 · Ariane RISC-V Core
 
 ---
 
 ## 🎯 Goal
-Achieve timing closure on the **Ariane/CVA6 RISC-V CPU core** synthesized and placed-and-routed at **450 MHz (clock period = 2.222 ns)** using the open-source **OpenROAD Flow Scripts (ORFS)** and the **NanGate45** open-source process design kit.
+Achieve timing closure on the **Ariane/Ariane133 RISC-V CPU core** synthesized and placed-and-routed at **450 MHz (clock period = 2.222 ns)** using the open-source **OpenROAD Flow Scripts (ORFS)** and the **NanGate45** open-source process design kit.
 
 **Target metric:** Setup TNS ≤ −1000 ns (threshold for acceptable closure progress)
 
@@ -132,6 +132,6 @@ Key parameters in `config.mk` and when to change them:
 
 ## 📚 References
 - [OpenROAD Flow Scripts](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts)
-- [CVA6 / Ariane RISC-V Core (OpenHW Group)](https://github.com/openhwgroup/cva6)
+- [Ariane133 / Ariane RISC-V Core (OpenHW Group)](https://github.com/openhwgroup/cva6)
 - [NanGate45 Open Cell Library](https://si2.org/research-archive/)
 - [OpenSTA Static Timing Analyzer](https://github.com/The-OpenROAD-Project/OpenSTA)
