@@ -1,5 +1,5 @@
 export DESIGN_NAME = ariane
-export DESIGN_NICKNAME = archgen
+export DESIGN_NICKNAME = archgen_opt4
 export PLATFORM = nangate45
 
 export SYNTH_HIERARCHICAL = 1
@@ -24,7 +24,7 @@ $(PLATFORM_DIR)/lib/fakeram45_256x16.lib
 export DIE_AREA = 0 0 1500 1500
 export CORE_AREA = 10 12 1448 1448
 
-export MACRO_PLACE_HALO = 10 10
+export MACRO_PLACE_HALO = 8 8
 export MACRO_PLACE_CHANNEL = 20 20
 export IO_CONSTRAINTS = \
 $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/io.tcl
@@ -38,4 +38,17 @@ export RTLMP_MIN_MACRO = 10
 export RTLMP_MAX_INST = 80000
 export RTLMP_MIN_INST = 8000
 
-#export GPL_RANDOM_SEED = 3
+# --- Aggressive Logic Retiming ---
+export SYNTH_RETIME_MODULES = scoreboard_00000008_00000004
+
+# --- Maximum Timing Over-Repair ---
+export SETUP_SLACK_MARGIN = 0.10
+export SKIP_GATE_CLONING = 0
+export GPL_KEEP_RESIZER_BELOW_OVERFLOW = 1
+export ENABLE_PLACE_REPAIR_TIMING = 1
+export MAX_REPAIR_TIMING_ITER = 10
+export SKIP_CTS_REPAIR_TIMING = 0
+export GPL_ROUTABILITY_DRIVEN = 0
+export PLACE_DENSITY = 0.50
+export CELL_PAD_IN_SITES_GLOBAL_PLACEMENT = 0
+export CELL_PAD_IN_SITES_DETAIL_PLACEMENT = 0
