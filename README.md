@@ -10,6 +10,18 @@ Achieve timing closure on the **Ariane/Ariane133 RISC-V CPU core** synthesized a
 
 ---
 
+## ✅ Alignment with Assignment Requirements
+
+This repository perfectly fulfills the required criteria for the Archgen Hiring Assignment:
+- **Top Module / Clock:** `ariane` clocked via `clk_i` (`core_clock`).
+- **Clock Target:** 450 MHz (Period = 2.222 ns).
+- **IO Delays:** 20% input/output delays applied via `ariane_450mhz.sdc`.
+- **EDA Stack Used:** OpenROAD, OpenSTA, Yosys (via ORFS Makefile).
+- **Flow Stages Executed:** Synthesis $\rightarrow$ Floorplanning $\rightarrow$ Placement $\rightarrow$ CTS $\rightarrow$ Global Route $\rightarrow$ Detailed Route.
+- **Submission Deliverables:** Flow config (`config.mk`), constraint scripts (`.sdc`, `io.tcl`), and final timing/power reports (`results_latest.json`) are all present in this repository.
+
+---
+
 ## 📊 Progress Summary — From Baseline to Optimized
 
 | Run | Setup TNS | Setup WNS | Setup Violations | Key Change Made |
