@@ -1,0 +1,4 @@
+violation type: Horizontal congestion
+	srcs: net:ex_stage_i/net48789 net:issue_stage_i.i_scoreboard/net47455 net:load_result_ex_id\[10\] net:issue_stage_i.i_scoreboard/net45476 net:issue_stage_i.i_scoreboard/net30762 net:i_cache_subsystem.i_nbdcache/net33053 net:issue_stage_i.i_scoreboard/net40072 net:i_cache_subsystem.i_nbdcache/net32106 net:issue_stage_i.i_scoreboard/_23575_ net:issue_stage_i.i_scoreboard/_23583_ net:issue_stage_i.i_scoreboard/_24666_ net:issue_stage_i.i_scoreboard/_24908_ net:issue_stage_i.i_scoreboard/_24924_ net:net472 net:net404 net:issue_stage_i.i_scoreboard/mem_q\[1665\] net:issue_stage_i.i_scoreboard/mem_q\[2028\] net:issue_stage_i.i_scoreboard/mem_q\[213\] net:issue_stage_i.i_scoreboard/mem_q\[2391\] net:issue_stage_i.i_scoreboard/mem_q\[2754\]
+	comment: capacity:19 usage:20 overflow:1
+	bbox = (458.8500, 780.9000) - (461.7000, 783.7500) on Layer -

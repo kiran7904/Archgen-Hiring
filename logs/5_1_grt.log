@@ -1,0 +1,886 @@
+OpenROAD dcf36133a369abc8f3c5e5738cd4d82e4903c0e0 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/archgen/base/4_cts.odb
+read_sdc ./results/nangate45/archgen/base/4_cts.sdc
+source /home/kiran/OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+
+Units:                2000
+Number of layers:     21
+Number of macros:     136
+Number of vias:       63
+Number of viarulegen: 19
+
+[INFO DRT-0150] Reading design.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_07590_ has 173 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_07670_ has 116 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_07673_ has 129 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_07690_ has 167 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_07696_ has 123 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_08387_ has 131 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_11237_ has 131 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_13272_ has 128 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_14353_ has 131 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_16150_ has 129 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_17469_ has 128 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_18338_ has 188 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_18457_ has 130 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net has 335 pins which may impact routing performance. Consider optimization.
+
+Design:                   ariane
+Die area:                 ( 0 0 ) ( 3000000 3000000 )
+Number of track patterns: 20
+Number of DEF vias:       0
+Number of components:     182268
+Number of terminals:      497
+Number of snets:          2
+Number of nets:           193400
+
+[INFO DRT-0167] List of default vias:
+  Layer via2
+    default via: via2_5
+  Layer via3
+    default via: via3_2
+  Layer via4
+    default via: via4_0
+  Layer via5
+    default via: via5_0
+  Layer via6
+    default via: via6_0
+  Layer via7
+    default via: via7_0
+  Layer via8
+    default via: via8_0
+  Layer via9
+    default via: via9_0
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+  Complete 100000 instances.
+[INFO DRT-0164] Number of unique instances = 245.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0018]   Complete 100000 insts.
+[INFO DRT-0024]   Complete active.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete metal1.
+[INFO DRT-0024]   Complete via1.
+[INFO DRT-0024]   Complete metal2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete metal3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete metal4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete metal5.
+[INFO DRT-0024]   Complete via5.
+[INFO DRT-0024]   Complete metal6.
+[INFO DRT-0024]   Complete via6.
+[INFO DRT-0024]   Complete metal7.
+[INFO DRT-0024]   Complete via7.
+[INFO DRT-0024]   Complete metal8.
+[INFO DRT-0024]   Complete via8.
+[INFO DRT-0024]   Complete metal9.
+[INFO DRT-0024]   Complete via9.
+[INFO DRT-0024]   Complete metal10.
+[INFO DRT-0033] active shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] metal1 shape region query size = 3662800.
+[INFO DRT-0033] via1 shape region query size = 72489.
+[INFO DRT-0033] metal2 shape region query size = 48458.
+[INFO DRT-0033] via2 shape region query size = 72489.
+[INFO DRT-0033] metal3 shape region query size = 64166.
+[INFO DRT-0033] via3 shape region query size = 72489.
+[INFO DRT-0033] metal4 shape region query size = 51726.
+[INFO DRT-0033] via4 shape region query size = 70568.
+[INFO DRT-0033] metal5 shape region query size = 30405.
+[INFO DRT-0033] via5 shape region query size = 101060.
+[INFO DRT-0033] metal6 shape region query size = 18722.
+[INFO DRT-0033] via6 shape region query size = 33539.
+[INFO DRT-0033] metal7 shape region query size = 5781.
+[INFO DRT-0033] via7 shape region query size = 0.
+[INFO DRT-0033] metal8 shape region query size = 0.
+[INFO DRT-0033] via8 shape region query size = 0.
+[INFO DRT-0033] metal9 shape region query size = 0.
+[INFO DRT-0033] via9 shape region query size = 0.
+[INFO DRT-0033] metal10 shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0076]   Complete 2000 pins.
+[INFO DRT-0076]   Complete 3000 pins.
+[INFO DRT-0078]   Complete 3501 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 189 unique inst patterns.
+[INFO DRT-0082]   Complete 10000 groups.
+[INFO DRT-0082]   Complete 20000 groups.
+[INFO DRT-0082]   Complete 30000 groups.
+[INFO DRT-0082]   Complete 40000 groups.
+[INFO DRT-0082]   Complete 50000 groups.
+[INFO DRT-0082]   Complete 60000 groups.
+[INFO DRT-0082]   Complete 70000 groups.
+[INFO DRT-0082]   Complete 80000 groups.
+[INFO DRT-0082]   Complete 90000 groups.
+[INFO DRT-0082]   Complete 100000 groups.
+[INFO DRT-0084]   Complete 103189 groups.
+#scanned instances     = 182268
+#unique  instances     = 228
+#stdCellGenAp          = 7376
+#stdCellValidPlanarAp  = 0
+#stdCellValidViaAp     = 4991
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 612376
+#instTermValidViaApCnt = 0
+#macroGenAp            = 3245
+#macroValidPlanarAp    = 3245
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:22:36, elapsed time = 00:02:50, memory = 926.07 (MB), peak = 1025.05 (MB)
+Took 173 seconds: pin_access
+global_route -congestion_report_file ./reports/nangate45/archgen/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal10
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal4  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal5  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal6  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal7  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal8  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal9  Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0088] Layer metal10 Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0003] Macros: 132
+[INFO GRT-0004] Blockages: 12936
+[INFO GRT-0019] Found 3514 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 335
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical      3271337       1535557          53.06%
+metal3     Horizontal    4432380       2181444          50.78%
+metal4     Vertical      2218214       1566883          29.36%
+metal5     Horizontal    2685055       1889172          29.64%
+metal6     Vertical      2702460       1903041          29.58%
+metal7     Horizontal     856441        601445          29.77%
+metal8     Vertical       983850        707700          28.07%
+metal9     Horizontal     491925        276150          43.86%
+metal10    Vertical       491925        276150          43.86%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0102] Start extra iteration 1/30
+[INFO GRT-0102] Start extra iteration 2/30
+[INFO GRT-0102] Start extra iteration 3/30
+[INFO GRT-0102] Start extra iteration 4/30
+[INFO GRT-0102] Start extra iteration 5/30
+[INFO GRT-0197] Via related to pin nodes: 1097414
+[INFO GRT-0198] Via related Steiner nodes: 30673
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 1444041
+[INFO GRT-0112] Final usage 3D: 6382320
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+metal1               0             0            0.00%             0 /  0 /  0
+metal2         1535557        491113           31.98%             0 /  0 /  0
+metal3         2181444        657574           30.14%             0 /  0 /  0
+metal4         1566883        308145           19.67%             0 /  0 /  0
+metal5         1889172        355334           18.81%             0 /  0 /  0
+metal6         1903041        170825            8.98%             0 /  0 /  0
+metal7          601445         46552            7.74%             0 /  0 /  0
+metal8          707700         10907            1.54%             0 /  0 /  0
+metal9          276150          8638            3.13%             0 /  0 /  0
+metal10         276150          1109            0.40%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total         10937542       2050197           18.74%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 7307143 um
+[INFO GRT-0014] Routed nets: 172874
+[INFO GRT-0303] Global routing runtime = 00:00:41
+Took 42 seconds: global_route -congestion_report_file ./reports/nangate45/archgen/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+estimate_parasitics -global_routing
+Took 5 seconds: estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |    196119
+     1000 |     +0.0% |       0 |       0 |             0 |    195119
+     2000 |     +0.0% |       0 |       0 |             0 |    194119
+     3000 |     +0.0% |       0 |       0 |             0 |    193119
+     4000 |     +0.0% |       0 |       0 |             0 |    192119
+     5000 |     +0.0% |       0 |       0 |             0 |    191119
+     6000 |     +0.0% |       0 |       0 |             0 |    190119
+     7000 |     +0.0% |       0 |       0 |             0 |    189119
+     8000 |     +0.0% |       0 |       0 |             0 |    188119
+     9000 |     +0.0% |       0 |       0 |             0 |    187119
+    10000 |     +0.0% |       0 |       0 |             0 |    186119
+    11000 |     +0.0% |       0 |       0 |             0 |    185119
+    12000 |     +0.0% |       0 |       0 |             0 |    184119
+    13000 |     +0.0% |       0 |       0 |             0 |    183119
+    14000 |     +0.0% |       0 |       0 |             0 |    182119
+    15000 |     +0.0% |       0 |       0 |             0 |    181119
+    16000 |     +0.0% |       0 |       0 |             0 |    180119
+    17000 |     +0.0% |       0 |       0 |             0 |    179119
+    18000 |     +0.0% |       0 |       0 |             0 |    178119
+    19000 |     +0.0% |       0 |       0 |             0 |    177119
+    20000 |     +0.0% |       0 |       0 |             0 |    176119
+    21000 |     +0.0% |       0 |       0 |             0 |    175119
+    22000 |     +0.0% |       0 |       0 |             0 |    174119
+    23000 |     +0.0% |       0 |       0 |             0 |    173119
+    24000 |     +0.0% |       0 |       0 |             0 |    172119
+    25000 |     +0.0% |       0 |       0 |             0 |    171119
+    26000 |     +0.0% |       0 |       0 |             0 |    170119
+    27000 |     +0.0% |       0 |       0 |             0 |    169119
+    28000 |     +0.0% |       0 |       0 |             0 |    168119
+    29000 |     +0.0% |       0 |       0 |             0 |    167119
+    30000 |     +0.0% |       0 |       2 |             2 |    166119
+    31000 |     +0.0% |       0 |       2 |             2 |    165119
+    32000 |     +0.0% |       0 |       2 |             2 |    164119
+    33000 |     +0.0% |       0 |       3 |             3 |    163119
+    34000 |     +0.0% |       0 |       3 |             3 |    162119
+    35000 |     +0.0% |       0 |       3 |             3 |    161119
+    36000 |     +0.0% |       0 |       3 |             3 |    160119
+    37000 |     +0.0% |       0 |       3 |             3 |    159119
+    38000 |     +0.0% |       0 |       3 |             3 |    158119
+    39000 |     +0.0% |       0 |       3 |             3 |    157119
+    40000 |     +0.0% |       0 |       3 |             3 |    156119
+    41000 |     +0.0% |       0 |       4 |             4 |    155119
+    42000 |     +0.0% |       0 |       4 |             4 |    154119
+    43000 |     +0.0% |       0 |       6 |             6 |    153119
+    44000 |     +0.0% |       0 |       6 |             6 |    152119
+    45000 |     +0.0% |       0 |       6 |             6 |    151119
+    46000 |     +0.0% |       0 |       6 |             6 |    150119
+    47000 |     +0.0% |       0 |       6 |             6 |    149119
+    48000 |     +0.0% |       0 |       6 |             6 |    148119
+    49000 |     +0.0% |       0 |       6 |             6 |    147119
+    50000 |     +0.0% |       0 |       6 |             6 |    146119
+    51000 |     +0.0% |       0 |       6 |             6 |    145119
+    52000 |     +0.0% |       0 |       6 |             6 |    144119
+    53000 |     +0.0% |       0 |       6 |             6 |    143119
+    54000 |     +0.0% |       0 |       6 |             6 |    142119
+    55000 |     +0.0% |       1 |       7 |             7 |    141119
+    56000 |     +0.0% |       1 |       9 |            10 |    140119
+    57000 |     +0.0% |       1 |       9 |            10 |    139119
+    58000 |     +0.0% |       1 |       9 |            10 |    138119
+    59000 |     +0.0% |       1 |      10 |            11 |    137119
+    60000 |     +0.0% |       1 |      10 |            11 |    136119
+    61000 |     +0.0% |       1 |      11 |            12 |    135119
+    62000 |     +0.0% |       1 |      11 |            12 |    134119
+    63000 |     +0.0% |       1 |      11 |            12 |    133119
+    64000 |     +0.0% |       1 |      11 |            12 |    132119
+    65000 |     +0.0% |       1 |      11 |            12 |    131119
+    66000 |     +0.0% |       1 |      11 |            12 |    130119
+    67000 |     +0.0% |       1 |      13 |            14 |    129119
+    68000 |     +0.0% |       1 |      13 |            14 |    128119
+    69000 |     +0.0% |       1 |      13 |            14 |    127119
+    70000 |     +0.0% |       1 |      13 |            14 |    126119
+    71000 |     +0.0% |       1 |      13 |            14 |    125119
+    72000 |     +0.0% |       1 |      13 |            14 |    124119
+    73000 |     +0.0% |       2 |      14 |            15 |    123119
+    74000 |     +0.0% |       2 |      14 |            15 |    122119
+    75000 |     +0.0% |       2 |      15 |            16 |    121119
+    76000 |     +0.0% |       2 |      15 |            16 |    120119
+    77000 |     +0.0% |       2 |      16 |            17 |    119119
+    78000 |     +0.0% |       2 |      16 |            17 |    118119
+    79000 |     +0.0% |       2 |      16 |            17 |    117119
+    80000 |     +0.0% |       2 |      17 |            18 |    116119
+    81000 |     +0.0% |       2 |      17 |            18 |    115119
+    82000 |     +0.0% |       2 |      17 |            18 |    114119
+    83000 |     +0.0% |       2 |      17 |            18 |    113119
+    84000 |     +0.0% |       2 |      17 |            18 |    112119
+    85000 |     +0.0% |       2 |      17 |            18 |    111119
+    86000 |     +0.0% |       2 |      17 |            18 |    110119
+    87000 |     +0.0% |       2 |      17 |            18 |    109119
+    88000 |     +0.0% |       2 |      17 |            18 |    108119
+    89000 |     +0.0% |       2 |      18 |            19 |    107119
+    90000 |     +0.0% |       2 |      18 |            19 |    106119
+    91000 |     +0.0% |       2 |      18 |            19 |    105119
+    92000 |     +0.0% |       2 |      19 |            20 |    104119
+    93000 |     +0.0% |       2 |      20 |            21 |    103119
+    94000 |     +0.0% |       2 |      20 |            21 |    102119
+    95000 |     +0.0% |       2 |      20 |            21 |    101119
+    96000 |     +0.0% |       2 |      20 |            21 |    100119
+    97000 |     +0.0% |       2 |      20 |            21 |     99119
+    98000 |     +0.0% |       2 |      20 |            21 |     98119
+    99000 |     +0.0% |       2 |      20 |            21 |     97119
+   100000 |     +0.0% |       2 |      20 |            21 |     96119
+   101000 |     +0.0% |       2 |      20 |            21 |     95119
+   102000 |     +0.0% |       2 |      20 |            21 |     94119
+   103000 |     +0.0% |       2 |      20 |            21 |     93119
+   104000 |     +0.0% |       2 |      20 |            21 |     92119
+   105000 |     +0.0% |       2 |      20 |            21 |     91119
+   106000 |     +0.0% |       2 |      20 |            21 |     90119
+   107000 |     +0.0% |       2 |      21 |            22 |     89119
+   108000 |     +0.0% |       2 |      21 |            22 |     88119
+   109000 |     +0.0% |       2 |      21 |            22 |     87119
+   110000 |     +0.0% |       2 |      21 |            22 |     86119
+   111000 |     +0.0% |       2 |      21 |            22 |     85119
+   112000 |     +0.0% |       2 |      21 |            22 |     84119
+   113000 |     +0.0% |       2 |      21 |            22 |     83119
+   114000 |     +0.0% |       2 |      21 |            22 |     82119
+   115000 |     +0.0% |       2 |      21 |            22 |     81119
+   116000 |     +0.0% |       2 |      21 |            22 |     80119
+   117000 |     +0.0% |       2 |      21 |            22 |     79119
+   118000 |     +0.0% |       3 |      23 |            24 |     78119
+   119000 |     +0.0% |       3 |      23 |            24 |     77119
+   120000 |     +0.0% |       3 |      23 |            24 |     76119
+   121000 |     +0.0% |       3 |      23 |            24 |     75119
+   122000 |     +0.0% |       3 |      23 |            24 |     74119
+   123000 |     +0.0% |       3 |      23 |            24 |     73119
+   124000 |     +0.0% |       3 |      23 |            24 |     72119
+   125000 |     +0.0% |       3 |      23 |            24 |     71119
+   126000 |     +0.0% |       3 |      23 |            24 |     70119
+   127000 |     +0.0% |       3 |      24 |            25 |     69119
+   128000 |     +0.0% |       3 |      24 |            25 |     68119
+   129000 |     +0.0% |       3 |      25 |            26 |     67119
+   130000 |     +0.0% |       3 |      25 |            26 |     66119
+   131000 |     +0.0% |       3 |      25 |            26 |     65119
+   132000 |     +0.0% |       3 |      26 |            27 |     64119
+   133000 |     +0.0% |       3 |      26 |            27 |     63119
+   134000 |     +0.0% |       3 |      26 |            27 |     62119
+   135000 |     +0.0% |       3 |      26 |            27 |     61119
+   136000 |     +0.0% |       3 |      26 |            27 |     60119
+   137000 |     +0.0% |       3 |      26 |            27 |     59119
+   138000 |     +0.0% |       3 |      26 |            27 |     58119
+   139000 |     +0.0% |       3 |      26 |            27 |     57119
+   140000 |     +0.0% |       3 |      26 |            27 |     56119
+   141000 |     +0.0% |       3 |      26 |            27 |     55119
+   142000 |     +0.0% |       3 |      26 |            27 |     54119
+   143000 |     +0.0% |       3 |      26 |            27 |     53119
+   144000 |     +0.0% |       3 |      26 |            27 |     52119
+   145000 |     +0.0% |       3 |      26 |            27 |     51119
+   146000 |     +0.0% |       3 |      26 |            27 |     50119
+   147000 |     +0.0% |       3 |      26 |            27 |     49119
+   148000 |     +0.0% |       3 |      26 |            27 |     48119
+   149000 |     +0.0% |       3 |      26 |            27 |     47119
+   150000 |     +0.0% |       3 |      26 |            27 |     46119
+   151000 |     +0.0% |       3 |      26 |            27 |     45119
+   152000 |     +0.0% |       3 |      26 |            27 |     44119
+   153000 |     +0.0% |       3 |      26 |            27 |     43119
+   154000 |     +0.0% |       3 |      26 |            27 |     42119
+   155000 |     +0.0% |       3 |      26 |            27 |     41119
+   156000 |     +0.0% |       3 |      26 |            27 |     40119
+   157000 |     +0.0% |       3 |      26 |            27 |     39119
+   158000 |     +0.0% |       3 |      26 |            27 |     38119
+   159000 |     +0.0% |       3 |      26 |            27 |     37119
+   160000 |     +0.0% |       3 |      26 |            27 |     36119
+   161000 |     +0.0% |       3 |      26 |            27 |     35119
+   162000 |     +0.0% |       3 |      26 |            27 |     34119
+   163000 |     +0.0% |       3 |      26 |            27 |     33119
+   164000 |     +0.0% |       3 |      26 |            27 |     32119
+   165000 |     +0.0% |       3 |      26 |            27 |     31119
+   166000 |     +0.0% |       3 |      26 |            27 |     30119
+   167000 |     +0.0% |       3 |      26 |            27 |     29119
+   168000 |     +0.0% |       3 |      26 |            27 |     28119
+   169000 |     +0.0% |       3 |      26 |            27 |     27119
+   170000 |     +0.0% |       3 |      26 |            27 |     26119
+   171000 |     +0.0% |       3 |      26 |            27 |     25119
+   172000 |     +0.0% |       3 |      26 |            27 |     24119
+   173000 |     +0.0% |       3 |      26 |            27 |     23119
+   174000 |     +0.0% |       3 |      26 |            27 |     22119
+   175000 |     +0.0% |       3 |      26 |            27 |     21119
+   176000 |     +0.0% |       3 |      26 |            27 |     20119
+   177000 |     +0.0% |       3 |      26 |            27 |     19119
+   178000 |     +0.0% |       3 |      26 |            27 |     18119
+   179000 |     +0.0% |       3 |      26 |            27 |     17119
+   180000 |     +0.0% |       3 |      26 |            27 |     16119
+   181000 |     +0.0% |       3 |      26 |            27 |     15119
+   182000 |     +0.0% |       3 |      26 |            27 |     14119
+   183000 |     +0.0% |       3 |      26 |            27 |     13119
+   184000 |     +0.0% |       3 |      26 |            27 |     12119
+   185000 |     +0.0% |       3 |      26 |            27 |     11119
+   186000 |     +0.0% |       3 |      26 |            27 |     10119
+   187000 |     +0.0% |       3 |      26 |            27 |      9119
+   188000 |     +0.0% |       3 |      26 |            27 |      8119
+   189000 |     +0.0% |       3 |      26 |            27 |      7119
+   190000 |     +0.0% |       3 |      26 |            27 |      6119
+   191000 |     +0.0% |       5 |      28 |            29 |      5119
+   192000 |     +0.0% |       5 |      28 |            29 |      4119
+   193000 |     +0.0% |       5 |      28 |            29 |      3119
+   194000 |     +0.0% |       5 |      28 |            29 |      2119
+   195000 |     +0.0% |       5 |      28 |            29 |      1119
+   196000 |     +0.0% |       5 |      28 |            29 |       119
+    final |     +0.0% |       5 |      28 |            29 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 7 slew violations.
+[INFO RSZ-0036] Found 29 capacitance violations.
+[INFO RSZ-0039] Resized 5 instances.
+[INFO RSZ-0038] Inserted 28 buffers in 29 nets.
+Took 156 seconds: repair_design -verbose
+global_route -start_incremental
+detailed_placement
+Placement Analysis
+---------------------------------
+total displacement         30.9 u
+average displacement        0.0 u
+max displacement            3.6 u
+original HPWL         5196100.5 u
+legalized HPWL        5196121.8 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/nangate45/archgen/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+Took 5 seconds: estimate_parasitics -global_routing
+repair_timing -setup_margin 0.05 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 5479 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 5479 out of 5479 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.971 |    -2826.4 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+       10 |       0 |       2 |        1 |      0 |     6 |    +0.0% |   -1.010 |    -2879.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+       20 |       0 |       3 |        8 |      0 |    10 |    +0.0% |   -1.031 |    -2990.4 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+       30 |       0 |       6 |        8 |      0 |    17 |    +0.0% |   -1.046 |    -3038.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+       40 |       0 |       8 |       11 |      0 |    23 |    +0.0% |   -1.054 |    -3067.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+       50 |       0 |      14 |       15 |      0 |    25 |    +0.0% |   -1.049 |    -3027.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[538]$_DFF_PN0_/D
+       52 |       0 |       1 |        0 |      0 |     0 |    +0.0% |   -0.966 |    -2808.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+       60 |       0 |       6 |        1 |      0 |     1 |    +0.0% |   -0.985 |    -2870.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+       70 |       0 |      10 |        6 |      0 |     5 |    +0.0% |   -1.001 |    -2927.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+       80 |       0 |      14 |        7 |      0 |    10 |    +0.0% |   -1.021 |    -2992.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[558]$_DFF_PN0_/D
+       90 |       0 |      16 |       16 |      0 |    12 |    +0.0% |   -1.034 |    -2985.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[1984]$_DFF_PN0_/D
+      100 |       0 |      20 |       24 |      0 |    13 |    +0.0% |   -1.023 |    -2964.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      108 |       0 |       4 |        1 |      0 |     1 |    +0.0% |   -0.965 |    -2804.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      110 |       0 |       5 |        1 |      0 |     1 |    +0.0% |   -0.976 |    -2839.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      120 |       0 |      13 |        1 |      0 |     3 |    +0.0% |   -0.975 |    -2836.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      130 |       0 |      16 |        3 |      0 |     8 |    +0.0% |   -0.990 |    -2876.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[538]$_DFF_PN0_/D
+      140 |       0 |      18 |        5 |      0 |    14 |    +0.0% |   -0.977 |    -2833.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[538]$_DFF_PN0_/D
+      150 |       0 |      20 |       15 |      0 |    15 |    +0.0% |   -0.989 |    -2850.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      159 |       0 |       4 |        1 |      0 |     1 |    +0.0% |   -0.965 |    -2804.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      160 |       0 |       4 |        1 |      0 |     1 |    +0.0% |   -0.965 |    -2804.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      170 |       0 |      13 |        2 |      0 |     1 |    +0.0% |   -0.980 |    -2852.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      180 |       0 |      15 |       12 |      0 |     2 |    +0.0% |   -0.994 |    -2866.2 |   5479 | issue_stage_i.i_scoreboard/mem_q[2698]$_DFF_PN0_/D
+      190 |       0 |      21 |       14 |      0 |     4 |    +0.0% |   -0.993 |    -2855.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[2698]$_DFF_PN0_/D
+      200 |       0 |      27 |       17 |      0 |     6 |    +0.0% |   -0.985 |    -2865.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      208 |       0 |       4 |        1 |      0 |     1 |    +0.0% |   -0.965 |    -2804.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      210 |       0 |       5 |        1 |      0 |     1 |    +0.0% |   -0.976 |    -2839.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      220 |       0 |      12 |        4 |      0 |     2 |    +0.0% |   -1.009 |    -2855.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[1984]$_DFF_PN0_/D
+      230 |       0 |      16 |       13 |      1 |     2 |    +0.0% |   -0.992 |    -2859.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      239 |       0 |       4 |        1 |      0 |     1 |    +0.0% |   -0.965 |    -2804.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      240 |       0 |       4 |        1 |      0 |     1 |    +0.0% |   -0.965 |    -2804.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      250 |       0 |      10 |        5 |      0 |     1 |    +0.0% |   -1.009 |    -2860.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[893]$_DFF_PN0_/D
+      260 |       0 |      13 |       10 |      0 |     4 |    +0.0% |   -0.997 |    -2873.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[893]$_DFF_PN0_/D
+      270 |       0 |      19 |       14 |      1 |     5 |    +0.0% |   -0.988 |    -2859.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      280 |       0 |      24 |       16 |      1 |     9 |    +0.0% |   -0.986 |    -2856.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      290 |       0 |      30 |       18 |      1 |    11 |    +0.0% |   -0.985 |    -2852.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      292 |       0 |       4 |        3 |      0 |     1 |    +0.0% |   -0.963 |    -2805.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      300 |       0 |      10 |        3 |      0 |     2 |    +0.0% |   -0.975 |    -2842.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      310 |       0 |      16 |        7 |      0 |     2 |    +0.0% |   -0.977 |    -2849.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      311 |       0 |       4 |        3 |      0 |     1 |    +0.0% |   -0.963 |    -2804.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      320 |       0 |      11 |        3 |      0 |     2 |    +0.0% |   -0.978 |    -2854.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      330 |       0 |      15 |       11 |      0 |     2 |    +0.0% |   -0.996 |    -2860.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[1984]$_DFF_PN0_/D
+      340 |       0 |      21 |       16 |      2 |     2 |    +0.0% |   -0.994 |    -2858.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      341 |       0 |       4 |        3 |      0 |     1 |    +0.0% |   -0.963 |    -2804.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      350 |       0 |      11 |        3 |      0 |     2 |    +0.0% |   -0.978 |    -2854.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      360 |       0 |      15 |       11 |      0 |     2 |    +0.0% |   -0.996 |    -2860.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[1984]$_DFF_PN0_/D
+      370 |       0 |      21 |       16 |      2 |     2 |    +0.0% |   -0.994 |    -2858.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      371 |       0 |       4 |        3 |      0 |     1 |    +0.0% |   -0.963 |    -2804.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      380 |       0 |      11 |        3 |      0 |     2 |    +0.0% |   -0.978 |    -2854.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      390 |       0 |      18 |        4 |      1 |     3 |    +0.0% |   -0.983 |    -2853.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      391 |       0 |       4 |        3 |      0 |     2 |    +0.0% |   -0.963 |    -2805.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      400 |       0 |      11 |        3 |      0 |     3 |    +0.0% |   -0.982 |    -2860.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      410 |       0 |      14 |       13 |      0 |     3 |    +0.0% |   -0.989 |    -2861.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[2004]$_DFF_PN0_/D
+      411 |       0 |       4 |        3 |      0 |     2 |    +0.0% |   -0.963 |    -2805.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      420 |       0 |      10 |        3 |      1 |     3 |    +0.0% |   -0.987 |    -2844.2 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      430 |       0 |      15 |        4 |      3 |     5 |    +0.0% |   -0.990 |    -2855.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      440 |       0 |      20 |        9 |      4 |     6 |    +0.0% |   -1.007 |    -2861.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[558]$_DFF_PN0_/D
+      450 |       0 |      25 |       17 |      4 |     6 |    +0.0% |   -0.994 |    -2863.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[558]$_DFF_PN0_/D
+      451 |       0 |       4 |        3 |      0 |     2 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      460 |       0 |      11 |        3 |      1 |     2 |    +0.0% |   -0.983 |    -2844.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      470 |       0 |      15 |        5 |      3 |     4 |    +0.0% |   -0.987 |    -2859.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      480 |       0 |      21 |       12 |      4 |     4 |    +0.0% |   -1.002 |    -2862.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      490 |       0 |      27 |       15 |      5 |     4 |    +0.0% |   -1.001 |    -2864.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      494 |       0 |       4 |        3 |      0 |     2 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      500 |       0 |       8 |        3 |      1 |     2 |    +0.0% |   -0.983 |    -2845.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      510 |       0 |      14 |        4 |      2 |     4 |    +0.0% |   -0.988 |    -2861.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      520 |       0 |      19 |        9 |      4 |     4 |    +0.0% |   -1.023 |    -2861.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[513]$_DFF_PN0_/D
+      530 |       0 |      24 |       16 |      4 |     4 |    +0.0% |   -0.992 |    -2863.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[919]$_DFF_PN0_/D
+      531 |       0 |       4 |        3 |      0 |     2 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      540 |       0 |      11 |        3 |      1 |     2 |    +0.0% |   -0.983 |    -2844.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      550 |       0 |      15 |        5 |      3 |     4 |    +0.0% |   -0.988 |    -2864.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      560 |       0 |      21 |       12 |      4 |     4 |    +0.0% |   -1.003 |    -2863.4 |   5479 | issue_stage_i.i_scoreboard/mem_q[558]$_DFF_PN0_/D
+      570 |       0 |      27 |       15 |      5 |     4 |    +0.0% |   -1.001 |    -2863.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      575 |       0 |       4 |        3 |      0 |     2 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      580 |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.976 |    -2844.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      590 |       0 |      15 |        4 |      1 |     3 |    +0.0% |   -0.979 |    -2853.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      597 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      600 |       0 |       6 |        3 |      0 |     3 |    +0.0% |   -0.985 |    -2872.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      610 |       0 |      12 |        4 |      2 |     4 |    +0.0% |   -0.978 |    -2842.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      620 |       0 |      18 |        5 |      4 |     5 |    +0.0% |   -0.991 |    -2858.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      630 |       0 |      24 |       13 |      4 |     5 |    +0.0% |   -1.001 |    -2860.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      640 |       0 |      30 |       16 |      5 |     5 |    +0.0% |   -1.002 |    -2863.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      641 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      650 |       0 |      11 |        3 |      0 |     4 |    +0.0% |   -0.984 |    -2861.2 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      658 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      660 |       0 |       4 |        3 |      0 |     4 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      670 |       0 |      13 |        4 |      0 |     4 |    +0.0% |   -0.982 |    -2853.8 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      680 |       0 |      15 |       14 |      0 |     5 |    +0.0% |   -0.993 |    -2869.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[2698]$_DFF_PN0_/D
+      684 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      690 |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.981 |    -2845.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      700 |       0 |      15 |        7 |      0 |     4 |    +0.0% |   -0.984 |    -2849.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      710 |       0 |      17 |       15 |      0 |     5 |    +0.0% |   -0.990 |    -2854.4 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      710 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      720 |       0 |      11 |        6 |      0 |     3 |    +0.0% |   -0.982 |    -2855.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      730 |       0 |      14 |       12 |      0 |     5 |    +0.0% |   -0.992 |    -2860.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[900]$_DFF_PN0_/D
+      740 |       0 |      21 |       14 |      0 |     6 |    +0.0% |   -0.992 |    -2862.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[880]$_DFF_PN0_/D
+      742 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      750 |       0 |      10 |        3 |      0 |     4 |    +0.0% |   -0.981 |    -2843.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      760 |       0 |      15 |        8 |      2 |     4 |    +0.0% |   -0.982 |    -2849.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      770 |       0 |      20 |       12 |      3 |     6 |    +0.0% |   -1.012 |    -2854.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[2736]$_DFF_PN0_/D
+      780 |       0 |      27 |       16 |      4 |     6 |    +0.0% |   -0.996 |    -2851.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[2681]$_DFF_PN0_/D
+      783 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2806.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      790 |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.981 |    -2846.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      800 |       0 |      15 |        8 |      0 |     4 |    +0.0% |   -0.997 |    -2849.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[2004]$_DFF_PN0_/D
+      809 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2806.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      810 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2806.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      820 |       0 |      12 |        4 |      0 |     4 |    +0.0% |   -0.989 |    -2866.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      826 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2806.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      830 |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.979 |    -2844.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      840 |       0 |      14 |        5 |      0 |     4 |    +0.0% |   -0.983 |    -2849.2 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      843 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2806.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      850 |       0 |       9 |        3 |      1 |     3 |    +0.0% |   -0.983 |    -2846.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+      860 |       0 |      15 |        5 |      2 |     4 |    +0.0% |   -0.990 |    -2867.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      870 |       0 |      20 |       10 |      2 |     5 |    +0.0% |   -0.995 |    -2853.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[534]$_DFF_PN0_/D
+      880 |       0 |      24 |       17 |      2 |     5 |    +0.0% |   -0.988 |    -2855.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[534]$_DFF_PN0_/D
+      880 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      890 |       0 |      12 |        3 |      0 |     4 |    +0.0% |   -0.985 |    -2861.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      897 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      900 |       0 |       6 |        3 |      0 |     3 |    +0.0% |   -0.988 |    -2872.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      910 |       0 |      13 |        5 |      0 |     4 |    +0.0% |   -0.983 |    -2850.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      914 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      920 |       0 |       9 |        3 |      0 |     3 |    +0.0% |   -0.979 |    -2843.4 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      930 |       0 |      14 |       10 |      0 |     3 |    +0.0% |   -0.997 |    -2861.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[880]$_DFF_PN0_/D
+      940 |       0 |      18 |       15 |      0 |     4 |    +0.0% |   -0.991 |    -2863.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      945 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.967 |    -2805.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      950 |       0 |       8 |        3 |      0 |     3 |    +0.0% |   -0.979 |    -2845.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      960 |       0 |      12 |       11 |      0 |     4 |    +0.0% |   -1.002 |    -2863.4 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      968 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      970 |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.975 |    -2840.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+      980 |       0 |      13 |        4 |      0 |     4 |    +0.0% |   -0.979 |    -2853.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[541]$_DFF_PN0_/D
+      990 |       0 |      15 |       14 |      0 |     5 |    +0.0% |   -0.994 |    -2869.2 |   5479 | issue_stage_i.i_scoreboard/mem_q[2698]$_DFF_PN0_/D
+      994 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1000 |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.976 |    -2844.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1010 |       0 |      16 |        4 |      1 |     4 |    +0.0% |   -0.978 |    -2855.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1015 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1020 |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.976 |    -2844.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1030 |       0 |      13 |        7 |      0 |     5 |    +0.0% |   -1.009 |    -2854.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[880]$_DFF_PN0_/D
+     1040 |       0 |      20 |       11 |      0 |     5 |    +0.0% |   -0.996 |    -2857.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[880]$_DFF_PN0_/D
+     1050 |       0 |      22 |       18 |      0 |     8 |    +0.0% |   -0.993 |    -2859.4 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+     1060 |       0 |      30 |       18 |      0 |    10 |    +0.0% |   -0.990 |    -2856.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[880]$_DFF_PN0_/D
+     1066 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1070 |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.976 |    -2844.6 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1080 |       0 |      14 |        4 |      1 |     4 |    +0.0% |   -0.978 |    -2853.5 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1089 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1090 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1100 |       0 |      11 |        6 |      0 |     4 |    +0.0% |   -0.979 |    -2855.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1100 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1110 |       0 |      10 |        4 |      2 |     3 |    +0.0% |   -0.975 |    -2843.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1120 |       0 |      15 |        8 |      2 |     5 |    +0.0% |   -0.997 |    -2858.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[534]$_DFF_PN0_/D
+     1130 |       0 |      23 |       11 |      2 |     5 |    +0.0% |   -0.994 |    -2858.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[520]$_DFF_PN0_/D
+     1140 |       0 |      28 |       17 |      2 |     5 |    +0.0% |   -0.987 |    -2854.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[520]$_DFF_PN0_/D
+     1141 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1150 |       0 |      10 |        5 |      0 |     4 |    +0.0% |   -0.981 |    -2861.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1160 |       0 |      15 |       11 |      0 |     4 |    +0.0% |   -0.997 |    -2860.9 |   5479 | issue_stage_i.i_scoreboard/mem_q[880]$_DFF_PN0_/D
+     1170 |       0 |      21 |       17 |      0 |     4 |    +0.0% |   -0.993 |    -2859.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+     1180 |       0 |      26 |       20 |      0 |     6 |    +0.0% |   -0.992 |    -2867.1 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+     1190 |       0 |      34 |       22 |      0 |     6 |    +0.0% |   -0.986 |    -2846.3 |   5479 | issue_stage_i.i_scoreboard/mem_q[1997]$_DFF_PN0_/D
+     1192 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1200 |       0 |      10 |        3 |      0 |     4 |    +0.0% |   -0.981 |    -2861.0 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+     1200 |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5479 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1200* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1201* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1202* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1203* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1204* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1205* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1206* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1207* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1208* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1209* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1210* |       0 |       4 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.7 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1211* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1212* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1213* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1214* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1215* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1216* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1217* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1218* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1219* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1220* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1220* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1221* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1222* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1223* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1224* |       0 |       5 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1226* |       0 |       6 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1228* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1229* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1230* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1230* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1231* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1232* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1233* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1234* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1235* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1236* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1237* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1238* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1239* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1240* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1240* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1241* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1242* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1243* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1244* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1245* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1246* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1247* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1248* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1249* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1250* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1250* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1251* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1252* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1253* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1254* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1255* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1256* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1257* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1258* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1259* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1260* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1260* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1261* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1262* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1263* |       0 |       7 |        3 |      0 |     3 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1265* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1266* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1267* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1268* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1269* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1270* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1270* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1271* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1272* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1273* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1274* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1275* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1276* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1277* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1278* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1279* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1280* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1280* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1281* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1282* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1283* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1284* |       0 |       7 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1286* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1287* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1288* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1289* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1290* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1290* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1291* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1292* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1293* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1294* |       0 |       8 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1296* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1297* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1298* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1299* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1300* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1301* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1302* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1303* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1304* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1305* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1306* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1307* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1308* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1309* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1310* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1310* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1311* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1312* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1313* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1314* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1315* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1316* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1317* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1318* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1319* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1320* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1320* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1321* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1322* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1323* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1324* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1325* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1326* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1327* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1328* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1329* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1330* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1330* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1331* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1332* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1333* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1334* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1335* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1336* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1337* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1338* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1339* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1340* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1340* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1341* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1342* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1343* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1344* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1345* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1346* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1347* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1348* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1349* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1350* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1350* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1351* |       0 |       9 |        3 |      0 |     4 |    +0.0% |   -0.964 |    -2805.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1356* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1357* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1358* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1359* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1360* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1360* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1361* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1362* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1363* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1364* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1365* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1366* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1367* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1368* |       0 |      12 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1370* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1370* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1371* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1372* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1373* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1374* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1375* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1376* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1377* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1378* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1379* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1380* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1380* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1381* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1382* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1383* |       0 |      13 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1385* |       0 |      14 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.4 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1388* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1389* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1390* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1390* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1391* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1392* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1393* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1394* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1395* |       0 |      16 |        3 |      0 |     5 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1397* |       0 |      16 |        3 |      0 |     6 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1398* |       0 |      16 |        3 |      0 |     6 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1399* |       0 |      16 |        3 |      0 |     6 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    1400* |       0 |      16 |        3 |      0 |     6 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    final |       0 |      16 |        3 |      0 |     6 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 3 buffers.
+[INFO RSZ-0051] Resized 16 instances: 16 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 6 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0046] Found 8 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.018 |  -0.065 | csr_regfile_i/mip_q$_DFF_PN0_/D
+    final |       0 |       8 |            0 |    +0.0% |   0.000 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[15]$_DFFE_PN0P_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 8 hold buffers.
+Took 517 seconds: repair_timing -setup_margin 0.05 -hold_margin 0 -repair_tns 100 -verbose
+global_route -start_incremental
+detailed_placement
+Placement Analysis
+---------------------------------
+total displacement         15.3 u
+average displacement        0.0 u
+max displacement            1.6 u
+original HPWL         5196136.4 u
+legalized HPWL        5196151.6 u
+delta HPWL                    0 %
+
+check_placement -verbose
+global_route -end_incremental -congestion_report_file ./reports/nangate45/archgen/base/congestion_post_repair_timing_opt_wns.rpt
+repair_timing -setup -skip_vt_swap -skip_last_gasp -repair_tns 0 -verbose -setup_margin 0.05
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 5476 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 1 out of 5476 (0.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.964 |    -2804.3 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+       10 |       0 |       0 |        2 |      0 |     7 |    +0.0% |   -1.019 |    -2910.8 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+       20 |       0 |       1 |        4 |      0 |    14 |    +0.0% |   -1.023 |    -2958.5 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+       30 |       0 |       4 |        5 |      0 |    20 |    +0.0% |   -1.026 |    -2973.1 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+       40 |       0 |       8 |        5 |      0 |    26 |    +0.0% |   -1.028 |    -2959.1 |   5476 | issue_stage_i.i_scoreboard/mem_q[538]$_DFF_PN0_/D
+       50 |       0 |      13 |        6 |      0 |    30 |    +0.0% |   -1.040 |    -3000.2 |   5476 | issue_stage_i.i_scoreboard/mem_q[538]$_DFF_PN0_/D
+       51 |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.965 |    -2807.0 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+    final |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -0.965 |    -2807.0 |   5476 | issue_stage_i.i_scoreboard/mem_q[559]$_DFF_PN0_/D
+--------------------------------------------------------------------------------------------------------------
+[WARNING RSZ-0062] Unable to repair all setup violations.
+Took 22 seconds: repair_timing -setup -skip_vt_swap -skip_last_gasp -repair_tns 0 -verbose -setup_margin 0.05
+global_route -start_incremental
+detailed_placement
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL         5196151.6 u
+legalized HPWL        5196151.6 u
+delta HPWL                    0 %
+
+check_placement -verbose
+global_route -end_incremental -congestion_report_file ./reports/nangate45/archgen/base/congestion_post_repair_timing.rpt
+Repair antennas...
+[WARNING GRT-0246] No diode with LEF class CORE ANTENNACELL found.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Took 6 seconds: estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 731431 um^2 35% utilization.
+[INFO FLW-0007] clock core_clock period 2.222000
+[INFO FLW-0008] Clock core_clock period 3.027
+[INFO FLW-0009] Clock core_clock slack -0.965
+write_db ./results/nangate45/archgen/base/5_1_grt.odb
+write_sdc -no_timestamp ./results/nangate45/archgen/base/5_1_grt.sdc
+Elapsed time: 17:03.25[h:]min:sec. CPU time: user 5440.41 sys 397.30 (570%). Peak memory: 3917000KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+5_1_grt                   .odb         1023           3825 a6801260dc35a4b4fa22
+5_1_grt                   .sdc                             fee19b5af71483a46ee2
