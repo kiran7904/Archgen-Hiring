@@ -85,53 +85,6 @@ This is an **architecturally 1-cycle cross-module path** (fetch credit counter m
 > **Note:** `ariane.sv2v.v` (the full 270k-line RTL) is excluded due to size. It is the standard Ariane sv2v-converted netlist from the OpenROAD benchmarks.
 
 ---
-
-## 🛠 How to Reproduce
-
-### Prerequisites
-- Windows 11 with WSL2 (Ubuntu)
-- Nix package manager installed in WSL
-- OpenROAD-flow-scripts cloned
-
-### Step 1: Enter the environment
-```bash
-wsl -d Ubuntu
-cd ~/OpenROAD-flow-scripts
-nix-shell
-```
-
-### Step 2: Place these design files
-```bash
-cd flow
-mkdir -p designs/nangate45/archgen_opt5
-# Copy all files from this repository into that directory
-```
-
-### Step 3: Clean and run
-```bash
-# Wipe any previous results for this design
-rm -rf results/nangate45/archgen_opt5/*
-rm -rf logs/nangate45/archgen_opt5/*
-rm -rf reports/nangate45/archgen_opt5/*
-
-# Execute the full flow
-make DESIGN_CONFIG=designs/nangate45/archgen_opt5/config.mk \
-     YOSYS_EXE=$(which yosys) \
-     OPENROAD_EXE=$(which openroad)
-```
-
-### Step 4: Verify results
-```bash
-# Check TNS and WNS
-grep -E "finish__timing__(setup|hold)__(tns|ws)" \
-    logs/nangate45/archgen_opt5/base/6_report.json
-
-# Verify all 8 MCPs fired correctly
-grep "INFO: MCP" logs/nangate45/archgen_opt5/base/1_synth.log
-```
-
----
-
 ## ⚙️ Configuration Levers Reference
 
 Key parameters in `config.mk` and when to change them:
